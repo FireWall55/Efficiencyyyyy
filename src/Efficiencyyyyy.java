@@ -105,7 +105,6 @@ public class Efficiencyyyyy implements ActionListener {
 
     public static void main(String[]args){
         new Efficiencyyyyy();
-        new Input();
     }
 
 
