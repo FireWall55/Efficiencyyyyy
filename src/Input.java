@@ -4,8 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Input extends JFrame implements ActionListener {
+    static JTextField textField;
     Input(){
-        JTextField textField = new JTextField();
+        textField = new JTextField();
         textField.setPreferredSize(new Dimension(250,40));
     }
     @Override

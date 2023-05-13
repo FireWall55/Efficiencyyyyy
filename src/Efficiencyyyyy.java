@@ -14,7 +14,10 @@ public class Efficiencyyyyy implements ActionListener {
     private JLabel dueDate;
     private JFrame frame;
     private JPanel panel;
-    private JTextField textField;
+    private JTextField subjectText;
+    private JTextField assignmentText;
+    private JTextField dueText;
+    private JButton submit;
 
     public Efficiencyyyyy() {
 
@@ -64,13 +67,33 @@ public class Efficiencyyyyy implements ActionListener {
         dueDate.setBounds(400,3,100,50);
 
 
+        subjectText = new JTextField();
+        subjectText.setText("Subject");
+        subjectText.setPreferredSize(new Dimension(250,40));
+        subjectText.setBounds(0,53, 100, 50);
+
+        assignmentText = new JTextField();
+        assignmentText.setPreferredSize(new Dimension(250,40));
+        assignmentText.setBounds(100,53, 300, 50);
+
+        dueText = new JTextField();
+        dueText.setPreferredSize(new Dimension(250,40));
+        dueText.setBounds(400,53, 100, 50);
+
+        submit = new JButton("Submit");
+        submit.addActionListener(this);
+        submit.setBounds(500,53,100,50);
 
 
 
         frame.add(subjects);
         frame.add(assignments);
         frame.add(button);
+        frame.add(subjectText);
+        frame.add(assignmentText);
+        frame.add(dueText);
         frame.add(dueDate);
+        frame.add(submit);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Efficiencyyyyy");
         frame.setSize(600,500);
@@ -86,7 +109,15 @@ public class Efficiencyyyyy implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent event) {
-        //listOfTextFields.add(new JTextField());
+        if (event.getActionCommand().equals("Submit")) {
+            subjectText.setEnabled(false);
+            assignmentText.setEnabled(false);
+            dueText.setEnabled(false);
+            submit.setVisible(false);
+        }
+        if (event.getActionCommand().equals("Add Row")) {
+
+        }
 
 
     }
